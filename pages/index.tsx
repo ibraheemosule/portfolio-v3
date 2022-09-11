@@ -17,7 +17,7 @@ const id = process.env.CONTENTFUL_SPACE_ID,
   token = process.env.CONTENTFUL_TOKEN;
 
 export async function getStaticProps() {
-  if (!id || !token) return { props: { projects: {} } };
+  if (!id || !token) return { props: { projects: [] } };
   const clients = createClient({
     space: id,
     accessToken: token,
