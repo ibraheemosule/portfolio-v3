@@ -20,7 +20,7 @@ const GlobalStyle = createGlobalStyle<GlobalProps>`
 
 body {
     width: 100vw;
-    overflow-x: hidden;
+   // overflow-x: hidden;
     font-size: 16px;
     background: ${({ theme, darkMode }) =>
       darkMode ? theme.theme2.bgCol : theme.theme1.bgCol};
@@ -107,7 +107,6 @@ h1,
 
   .skills {
     display: flex;
-    padding: 0 -15px;
     width: 100%;
     margin-top: 0;
   }

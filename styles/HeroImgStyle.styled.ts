@@ -23,7 +23,6 @@ export const HeroImgStyle = styled.div<IStyle>`
     background: ${({ theme }) => theme.theme1.navBgCol};
     position: relative;
     width: 100%;
-
     overflow: hidden;
 
     img {

@@ -5,19 +5,10 @@ import { IStyle } from "../ts-types/styleTypes";
 export const AboutStyle = styled(HeroStyle)<IStyle>`
   position: relative;
   width: 100%;
-  margin-top: 200px;
-  overflow-x: clip;
+  margin-top: -5px;
   background: ${({ theme, darkMode }) =>
     darkMode ? theme.theme2.aboutBgCol : theme.theme1.aboutBgCol};
   transition: background-color 0.3s ease-in;
-
-  @media (min-width: 768px) {
-    margin-top: 200px;
-  }
-
-  @media (min-width: 1240px) {
-    margin-top: 100px;
-  }
 
   section {
     z-index: 1;
@@ -49,10 +40,8 @@ export const AboutStyle = styled(HeroStyle)<IStyle>`
   }
   svg {
     position: absolute;
-    width: 120%;
-    height: 100%;
-    top: -20%;
-    left: -10%;
+    width: 100%;
+    top: -50%;
     color: ${({ theme, darkMode }) =>
       darkMode ? theme.theme2.aboutBgCol : theme.theme1.aboutBgCol};
     transition: color 0.3s ease-in;

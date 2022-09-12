@@ -26,7 +26,7 @@ const Nav: React.FC<INavProps> = ({ setEl }) => {
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const toggleNav = useCallback(() => {
-    if (window.innerWidth > 576) return;
+    if (window.innerWidth >= 576) return;
 
     setToggleIcon(toggle => !toggle);
 

@@ -58,21 +58,4 @@ export default styled.section<IStyle>`
       height: auto;
     }
   }
-
-  .background-img {
-    position: absolute;
-    width: 120%;
-    height: 100%;
-    bottom: -13%;
-    left: -10%;
-    color: ${({ theme, darkMode }) =>
-      darkMode ? theme.theme2.aboutBgCol : theme.theme1.aboutBgCol};
-    transition: color 0.3s ease-in;
-    transform: rotateX(180deg);
-    transform: rotateZ(180deg);
-
-    @media (min-width: 768px) {
-      bottom: -20%;
-    }
-  }
 `;

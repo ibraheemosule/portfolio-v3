@@ -18,34 +18,36 @@ const About: React.FC<IAboutProps> = ({ about }) => {
   const { darkmode } = useContext(Context);
 
   return (
-    <AboutStyle darkMode={darkmode}>
+    <>
       <Blob />
-      <Row>
-        <h3>About Me</h3>
-      </Row>
-      <div>
-        <HeroStyle>
-          <AboutImgStyle className="about">
-            <div>
-              <Image
-                src={about[0].fields.photo}
-                alt="ibrahim picture"
-                layout="fill"
-                priority={true}
-              />
+      <AboutStyle darkMode={darkmode}>
+        <Row>
+          <h3>About Me</h3>
+        </Row>
+        <div>
+          <HeroStyle>
+            <AboutImgStyle className="about">
+              <div>
+                <Image
+                  src={about[0].fields.photo}
+                  alt="ibrahim picture"
+                  layout="fill"
+                  priority={true}
+                />
+              </div>
+            </AboutImgStyle>
+            <div className="title">
+              <p>{about[0].fields.about}</p>
+              <Link href={cvLink}>
+                <a>
+                  <Button>View CV</Button>
+                </a>
+              </Link>
             </div>
-          </AboutImgStyle>
-          <div className="title">
-            <p>{about[0].fields.about}</p>
-            <Link href={cvLink}>
-              <a>
-                <Button>View CV</Button>
-              </a>
-            </Link>
-          </div>
-        </HeroStyle>
-      </div>
-    </AboutStyle>
+          </HeroStyle>
+        </div>
+      </AboutStyle>
+    </>
   );
 };
 
