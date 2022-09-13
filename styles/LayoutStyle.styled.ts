@@ -8,11 +8,14 @@ export const LayoutStyle = styled(Row)<IStyle>`
   max-width: 1500px;
   margin: auto;
   display: block;
+  color: ${({ theme, darkMode }) =>
+    darkMode ? theme.theme2.titleCol : theme.theme1.titleCol};
 
   .darkmode {
     position: absolute;
     top: 10%;
     right: 5%;
+    z-index: 1;
     outline: none;
     border-radius: 5px;
     border: none;

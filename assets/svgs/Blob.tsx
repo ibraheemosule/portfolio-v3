@@ -1,5 +1,6 @@
 import { BlobStyle } from "../../styles/BlobStyle.styled";
 
+
 const Blob: React.FC = () => {
   return (
     <BlobStyle

@@ -5,11 +5,14 @@ import { IStyle } from "../ts-types/styleTypes";
 export const AboutImgStyle = styled(HeroImgStyle)<IStyle>`
   padding-top: 50px;
   padding-bottom: 0;
+  border-radius: 0;
+  overflow: initial;
 
   @media (min-width: 768px) {
     padding-top: 100px;
     padding-bottom: 100px;
   }
+
   div {
     border-radius: 52% 87% 30% 75% / 49% 60% 31% 56%;
     box-shadow: 3px 4.1px 7.3px rgba(0, 0, 0, 0.045),

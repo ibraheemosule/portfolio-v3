@@ -45,29 +45,7 @@ export const Navbar = styled.nav<INavbarStyle>`
         display: flex;
         justify-content: center;
         transform: translate(-100%, -100%);
-        a {
-          color: ${({ theme, darkMode }) =>
-            darkMode ? theme.theme2.navTextCol : theme.theme1.navTextCol};
-          text-decoration: none;
-          display: flex;
-          padding: 10px 5px;
-          text-align: center;
-          cursor: pointer;
-          margin-left: 5px;
-          margin-right: 5px;
-          align-items: center;
-          font-size: small;
 
-          &:hover {
-            color: ${({ theme }) => theme.theme1.navHoverCol};
-          }
-
-          span {
-            margin-left: 5px;
-            font-size: inherit;
-            transition: all 0.3s ease-in;
-          }
-        }
         button {
           color: ${({ theme, darkMode }) =>
             darkMode ? theme.theme2.navTextCol : theme.theme1.navTextCol};
@@ -86,6 +64,13 @@ export const Navbar = styled.nav<INavbarStyle>`
 
           &:hover {
             color: ${({ theme }) => theme.theme1.navHoverCol};
+          }
+
+          a {
+            display: flex;
+            text-decoration: none;
+            align-items: center;
+            color: inherit;
           }
 
           span {

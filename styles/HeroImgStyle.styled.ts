@@ -3,17 +3,24 @@ import { IStyle } from "../ts-types/styleTypes";
 
 export const HeroImgStyle = styled.div<IStyle>`
   flex-basis: 80%;
-  aspect-ratio: 7/6;
   margin: auto;
+  aspect-ratio: 1/1;
+  margin: auto;
+  border-radius: 50%;
+  overflow: hidden;
+
   @media (min-width: 576px) {
     flex-basis: 70%;
+    aspect-ratio: 7/6;
+    border-radius: none;
+    overflow: initial;
   }
   @media (min-width: 768px) {
     flex-basis: 50%;
     padding: 30px;
   }
 
-  @media (min-width: 1340px) {
+  @media (min-width: 1240px) {
     padding: 150px;
   }
 
@@ -23,8 +30,12 @@ export const HeroImgStyle = styled.div<IStyle>`
     background: ${({ theme }) => theme.theme1.navBgCol};
     position: relative;
     width: 100%;
-
     overflow: hidden;
+
+    span {
+      background: ${({ theme, darkMode }) =>
+        darkMode ? theme.theme2.bgCol : theme.theme1.bgCol} !important;
+    }
 
     img {
       position: absolute;

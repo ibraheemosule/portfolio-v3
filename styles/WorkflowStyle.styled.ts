@@ -5,23 +5,12 @@ export const WorkflowStyle = styled.section<IStyle>`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 50px;
-  z-index: 111;
+  margin-top: 0;
   padding: 0 15px;
-
-  @media (min-width: 768px) {
-    margin-top: 150px;
-    padding: 0 50px;
-  }
-
-  @media (min-width: 1024px) {
-    padding: 0 100px;
-  }
 
   .wrapper {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
     justify-content: space-around;
     margin-top: 30px;
 
@@ -37,14 +26,6 @@ export const WorkflowStyle = styled.section<IStyle>`
       padding: 2rem 1rem;
       padding-bottom: 2rem;
       width: 70%;
-
-      @media (min-width: 576px) {
-        width: 40%;
-      }
-
-      @media (min-width: 1240px) {
-        width: 20%;
-      }
 
       div {
         width: 60px;
@@ -98,6 +79,34 @@ export const WorkflowStyle = styled.section<IStyle>`
         background: hsla(240, 100%, 50%, 0.208);
       }
       border-bottom: 5px solid hsla(240, 100%, 50%, 0.308);
+    }
+  }
+
+  @media (min-width: 576px) {
+    .wrapper {
+      & > div {
+        width: 40%;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    padding: 0 50px;
+    margin-top: 50px;
+  }
+
+  @media (min-width: 1024px) {
+    margin-top: 100px;
+    padding: 0 100px;
+  }
+
+  @media (min-width: 1240px) {
+    margin-top: 150px;
+
+    .wrapper {
+      & > div {
+        width: 20%;
+      }
     }
   }
 `;

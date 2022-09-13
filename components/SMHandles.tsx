@@ -5,7 +5,7 @@ import EmailLogo from "../assets/svgs/EmailLogo";
 import FacebookLogo from "../assets/svgs/FacebookLogo";
 import { useContext } from "react";
 import { SMHandlesStyle } from "../styles/SMHandlesStyle.styled";
-import { Context } from "../assets/Context";
+import { Context } from "../assets/utils/Context";
 
 const SMHandles = () => {
   const { darkmode } = useContext(Context);

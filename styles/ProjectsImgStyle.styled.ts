@@ -9,6 +9,8 @@ export const ProjectsImgStyle = styled(HeroImgStyle)<IStyle>`
   margin-top: 0;
   flex-basis: 100%;
   margin-bottom: -50px;
+  border-radius: 0;
+  overflow: initial;
 
   @media (min-width: 768px) {
     align-items: start;
@@ -16,12 +18,6 @@ export const ProjectsImgStyle = styled(HeroImgStyle)<IStyle>`
     padding-top: 0;
     margin-bottom: 0;
     flex-basis: 50%;
-  }
-
-  ${
-    "" /* @media (min-width: 1024px) {
-    padding: 0 150px 0 0px;
-  } */
   }
 
   div {

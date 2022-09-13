@@ -11,10 +11,6 @@ export const AllProjectsStyle = styled(MainBodyStyle)<IStyle>`
   padding: 20vh 0 100px 0px;
   min-height: 100vh;
 
-  @media (min-width: 576px) {
-    padding: 50px 15px 100px 50px;
-  }
-
   .container {
     display: flex;
     flex-basis: 100%;
@@ -56,11 +52,7 @@ export const AllProjectsStyle = styled(MainBodyStyle)<IStyle>`
       animation-duration: 0.75s;
       animation-iteration-count: 1;
       animation-fill-mode: forwards;
-
-      @media (min-width: 768px) {
-        height: 280px;
-        flex-basis: 40%;
-      }
+      z-index: 1;
 
       img {
         position: absolute;
@@ -97,6 +89,19 @@ export const AllProjectsStyle = styled(MainBodyStyle)<IStyle>`
         .details {
           transform: translateY(25%);
         }
+      }
+    }
+  }
+
+  @media (min-width: 576px) {
+    padding: 50px 15px 100px 50px;
+  }
+
+  @media (min-width: 768px) {
+    .container {
+      .card {
+        height: 280px;
+        flex-basis: 40%;
       }
     }
   }

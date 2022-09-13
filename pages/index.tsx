@@ -9,7 +9,7 @@ import Workflow from "../components/Workflow";
 import Contact from "../components/Contact";
 import { createClient } from "contentful";
 import { IIndexPageProps } from "../ts-types/componentTypes";
-import { Context } from "../assets/Context";
+import { Context } from "../assets/utils/Context";
 import { useContext, useEffect } from "react";
 import Head from "next/head";
 
@@ -17,7 +17,7 @@ const id = process.env.CONTENTFUL_SPACE_ID,
   token = process.env.CONTENTFUL_TOKEN;
 
 export async function getStaticProps() {
-  if (!id || !token) return { props: { projects: {} } };
+  if (!id || !token) return { props: { projects: [] } };
   const clients = createClient({
     space: id,
     accessToken: token,
