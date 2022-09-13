@@ -5,18 +5,10 @@ export const HeroStyle = styled.section<IStyle>`
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  margin-top: 100px;
+  margin: 100px 0;
   align-items: center;
   line-height: 1.3;
   letter-spacing: 2px;
-
-  @media (min-width: 768px) {
-    align-items: baseline;
-  }
-
-  @media (min-width: 1340px) {
-    align-items: center;
-  }
 
   div.title {
     flex-basis: 100%;
@@ -24,16 +16,6 @@ export const HeroStyle = styled.section<IStyle>`
     margin-top: 50px;
     align-self: center;
     position: relative;
-
-    @media (min-width: 768px) {
-      flex-basis: 50%;
-      padding-right: 20px;
-      order: 0;
-    }
-    @media (min-width: 1340px) {
-      align-items: center;
-      margin-top: 0;
-    }
   }
 
   .description {
@@ -74,5 +56,28 @@ export const HeroStyle = styled.section<IStyle>`
     animation-delay: 1.5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+  }
+
+  @media (min-width: 768px) {
+    align-items: baseline;
+
+    div.title {
+      flex-basis: 50%;
+      padding-right: 20px;
+      order: 0;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: 1340px) {
+    align-items: center;
+
+    div.title {
+      align-items: center;
+      margin-top: 0;
+    }
   }
 `;

@@ -5,16 +5,9 @@ import { IProjectsStyle } from "../ts-types/styleTypes";
 export const ProjectsStyle = styled(HeroStyle)<IProjectsStyle>`
   position: relative;
   width: 100%;
-  margin-top: 150px;
-  margin-bottom: 50px;
+ margin-top: -20px;
+margin-bottom: 50px;
 
-  @media (min-width: 768px) {
-    margin-top: 200px;
-  }
-
-  @media (min-width: 1240px) {
-    margin-top: 150px;
-  }
 
   section {
     z-index: 1;
@@ -22,6 +15,9 @@ export const ProjectsStyle = styled(HeroStyle)<IProjectsStyle>`
     margin-top: 0;
 
     @media (min-width: 768px) {
+      padding-top: 10px;
+    }
+    @media (min-width: 1024px) {
       padding-top: 50px;
     }
   }
@@ -46,7 +42,13 @@ export const ProjectsStyle = styled(HeroStyle)<IProjectsStyle>`
     @media (min-width: 768px) {
       padding: 0 15px;
     }
+    
     @media (min-width: 1024px) {
+      margin-top: 0;
+      padding: 0 0 0 50px;
+    }
+
+    @media (min-width: 1340px) {
       margin-top: 0;
       padding: 0 150px 0 50px;
     }
@@ -106,7 +108,7 @@ export const ProjectsStyle = styled(HeroStyle)<IProjectsStyle>`
      }
     }
 
-    @media (min-width: 1360px){
+    @media (min-width: 1240px){
 
       div.title {
         padding: 0 0px 0 150px;
@@ -116,5 +118,21 @@ export const ProjectsStyle = styled(HeroStyle)<IProjectsStyle>`
           margin-left: -100px;
         }
     }
+  }
+
+  @media (min-width: 576px){
+    margin-top: -30px;
+  }
+
+  @media (min-width: 768px){
+    margin-top: -50px;
+  }
+
+  @media (min-width: 1024px){
+    margin-top: -70px;
+  }
+
+  @media (min-width: 1280px){
+    margin-top: -100px;
   }
 `;

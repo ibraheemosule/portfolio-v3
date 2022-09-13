@@ -10,7 +10,7 @@ const Projects: React.FC<IProjectsProps> = props => {
   return (
     <>
       <ProjectsStyle i={index} className={index === 1 ? "reverse" : ""}>
-        <ProjectsImgStyle className="">
+        <ProjectsImgStyle>
           <div className="img_container">
             <Image src={image} alt="project landing page view" layout="fill" />
           </div>
