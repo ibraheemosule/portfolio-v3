@@ -5,7 +5,7 @@ import { IStyle } from "../ts-types/styleTypes";
 export const AboutStyle = styled(HeroStyle)<IStyle>`
   position: relative;
   width: 100%;
-  margin-top: -5px;
+  margin-top: -20px;
   background: ${({ theme, darkMode }) =>
     darkMode ? theme.theme2.aboutBgCol : theme.theme1.aboutBgCol};
   transition: background-color 0.3s ease-in;

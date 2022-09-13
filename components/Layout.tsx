@@ -4,6 +4,7 @@ import { ILayout } from "../ts-types/componentTypes";
 
 import { useContext, useState, cloneElement } from "react";
 import { Context } from "../assets/Context";
+import BgAnimation from "./BgAnimation";
 
 const Layout: React.FC<ILayout> = ({ children }) => {
   const { darkmode, toggleDarkmode } = useContext(Context);
@@ -16,6 +17,7 @@ const Layout: React.FC<ILayout> = ({ children }) => {
       </button>
       <Nav el={el} setEl={setEl} />
       <div>{cloneElement(children, { el, setEl })}</div>
+      <BgAnimation />
     </LayoutStyle>
   );
 };
