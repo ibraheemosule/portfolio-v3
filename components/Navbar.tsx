@@ -1,16 +1,14 @@
 import { Navbar } from "../styles/Navbar.styled";
 import SMHandles from "./SMHandles";
-import CallLogo from "../assets/svgs/CallLogo";
-import FileLogo from "../assets/svgs/FileLogo";
-import HomeLogo from "../assets/svgs/HomeLogo";
-import SkillsLogo from "../assets/svgs/SkillsLogo";
-import PersonLogo from "../assets/svgs/PersonLogo";
 import LetterLogo from "../assets/svgs/Letter";
 import Link from "next/link";
 import { MouseEvent, useContext, useRef, useCallback } from "react";
-import { Context } from "../assets/Context";
+import { Context } from "../assets/utils/Context";
 import { useRouter } from "next/router";
 import { INavProps } from "../ts-types/componentTypes";
+import navList from "../assets/utils/navList";
+
+const menuIconClass = ["first", "second", "third"];
 
 const Nav: React.FC<INavProps> = ({ setEl }) => {
   const { darkmode, toggle, setToggle, toggleIcon, setToggleIcon } =
@@ -84,48 +82,33 @@ const Nav: React.FC<INavProps> = ({ setEl }) => {
       </div>
       <section ref={section} className="list">
         <ul>
-          <li onClick={toggleNav}>
-            <Link href="/">
-              <a>
-                <HomeLogo />
-                <span>Home</span>
-              </a>
-            </Link>
-          </li>
-          <li>
-            <button onClick={e => scrollToId(e)}>
-              <PersonLogo />
-              <span>About</span>
-            </button>
-          </li>
-          <li>
-            <button onClick={e => scrollToId(e)}>
-              <SkillsLogo />
-              <span>Skills</span>
-            </button>
-          </li>
-          <li onClick={toggleNav}>
-            <Link href="/AllProjects" scroll={false}>
-              <a>
-                <FileLogo />
-                <span>Projects</span>
-              </a>
-            </Link>
-          </li>
-          <li>
-            <button onClick={e => scrollToId(e)}>
-              <CallLogo />
-              <span>Contact</span>
-            </button>
-          </li>
+          {navList.map(({ href, Icon, name }) => {
+            return (
+              <li key={name}>
+                <button onClick={href ? toggleNav : e => scrollToId(e)}>
+                  {href ? (
+                    <Link href={href} scroll={name === "Projects" && false}>
+                      <a>
+                        <Icon />
+                        <span>{name}</span>
+                      </a>
+                    </Link>
+                  ) : (
+                    <Icon />
+                  )}
+                  {!href ? <span>{name}</span> : ""}
+                </button>
+              </li>
+            );
+          })}
         </ul>
-
         <SMHandles />
       </section>
+
       <button className="hamburger" onClick={toggleNav}>
-        <span className="first"></span>
-        <span className="second"></span>
-        <span className="third"></span>
+        {menuIconClass.map(val => (
+          <span className={val} key={val}></span>
+        ))}
       </button>
     </Navbar>
   );

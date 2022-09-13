@@ -32,6 +32,7 @@ export default styled.section<IStyle>`
     h5 {
       margin: auto;
       margin-top: 5px;
+      text-transform: uppercase;
     }
 
     svg {

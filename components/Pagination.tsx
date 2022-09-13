@@ -1,7 +1,7 @@
 import { IPaginationProps } from "../ts-types/componentTypes";
 import { PaginationStyle } from "../styles/PaginationStyle.styled";
 import { useContext } from "react";
-import { Context } from "../assets/Context";
+import { Context } from "../assets/utils/Context";
 
 const Pagination: React.FC<IPaginationProps> = props => {
   const { darkmode } = useContext(Context);

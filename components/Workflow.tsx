@@ -4,7 +4,7 @@ import ProblemSolvingIcon from "../assets/svgs/ProblemSolvingIcon";
 import CriticalThinkingIcon from "../assets/svgs/CriticalThinkingIcon";
 import EmpathyIcon from "../assets/svgs/EmpathyIcon";
 import { useContext } from "react";
-import { Context } from "../assets/Context";
+import { Context } from "../assets/utils/Context";
 
 const Workflow = () => {
   const { darkmode } = useContext(Context);

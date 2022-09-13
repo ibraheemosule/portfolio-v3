@@ -9,7 +9,7 @@ import { Paginate } from "../ts-types/dataTypes";
 import { useState, useEffect } from "react";
 import Pagination from "../components/Pagination";
 import { useContext } from "react";
-import { Context } from "../assets/Context";
+import { Context } from "../assets/utils/Context";
 import Head from "next/head";
 
 const id = process.env.CONTENTFUL_SPACE_ID,

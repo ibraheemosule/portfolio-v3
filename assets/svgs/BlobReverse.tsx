@@ -1,11 +1,15 @@
 import { useContext } from "react";
-import { Context } from "../Context";
+import { Context } from "../utils/Context";
 import theme from "../../styles/theme";
 
 const BlobReverse: React.FC = () => {
   const { darkmode } = useContext(Context);
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 1440 320"
+      style={{ marginTop: "-20px" }}
+    >
       <path
         fill={darkmode ? theme.theme2.aboutBgCol : theme.theme1.aboutBgCol}
         fillOpacity="1"

@@ -52,6 +52,7 @@ export const AllProjectsStyle = styled(MainBodyStyle)<IStyle>`
       animation-duration: 0.75s;
       animation-iteration-count: 1;
       animation-fill-mode: forwards;
+      z-index: 1;
 
       img {
         position: absolute;

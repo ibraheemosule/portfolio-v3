@@ -10,7 +10,7 @@ margin-bottom: 50px;
 
 
   section {
-    z-index: 1;
+
     padding: 0 15px 0;
     margin-top: 0;
 
@@ -23,7 +23,7 @@ margin-bottom: 50px;
   }
 
   div {
-    z-index: 1;
+
     aspect-ratio: auto;
     h3 {
       text-align: center;

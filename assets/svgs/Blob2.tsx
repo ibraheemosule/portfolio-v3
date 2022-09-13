@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Context } from "../Context";
+import { Context } from "../utils/Context";
 import theme from "../../styles/theme";
 
 const Blob2: React.FC = () => {

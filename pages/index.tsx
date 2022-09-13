@@ -9,7 +9,7 @@ import Workflow from "../components/Workflow";
 import Contact from "../components/Contact";
 import { createClient } from "contentful";
 import { IIndexPageProps } from "../ts-types/componentTypes";
-import { Context } from "../assets/Context";
+import { Context } from "../assets/utils/Context";
 import { useContext, useEffect } from "react";
 import Head from "next/head";
 

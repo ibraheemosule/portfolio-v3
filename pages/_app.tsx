@@ -3,7 +3,7 @@ import { ThemeProvider } from "styled-components";
 import theme from "../styles/theme";
 import GlobalStyle from "../styles/Global.styled";
 import Layout from "../components/Layout";
-import { Context } from "../assets/Context";
+import { Context } from "../assets/utils/Context";
 import { useState, useEffect } from "react";
 
 interface CustomAppProps extends AppProps {}
