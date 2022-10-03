@@ -7,21 +7,21 @@ export const HeroImgStyle = styled.div<IStyle>`
   aspect-ratio: 1/1;
   margin: auto;
   border-radius: 50%;
-  overflow: hidden;
 
   @media (min-width: 576px) {
-    flex-basis: 70%;
+    flex-basis: 40%;
+    padding-top: 3rem;
     aspect-ratio: 7/6;
     border-radius: none;
-    overflow: initial;
   }
+
   @media (min-width: 768px) {
     flex-basis: 50%;
     padding: 30px;
   }
 
   @media (min-width: 1240px) {
-    padding: 150px;
+    flex-basis: 40%;
   }
 
   div {

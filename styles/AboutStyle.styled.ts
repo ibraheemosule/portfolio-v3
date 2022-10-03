@@ -1,8 +1,7 @@
 import styled from "styled-components";
-import { HeroStyle } from "./Hero.styled";
 import { IStyle } from "../ts-types/styleTypes";
 
-export const AboutStyle = styled(HeroStyle)<IStyle>`
+export const AboutStyle = styled.section<IStyle>`
   position: relative;
   width: 100%;
   margin-top: -20px;
@@ -10,48 +9,66 @@ export const AboutStyle = styled(HeroStyle)<IStyle>`
     darkMode ? theme.theme2.aboutBgCol : theme.theme1.aboutBgCol};
   transition: background-color 0.3s ease-in;
 
-  section {
-    z-index: 1;
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+    align-items: center;
+    line-height: 1.5rem;
+    letter-spacing: 2px;
     padding-right: 15px;
     padding-left: 15px;
-    margin-top: 0;
-  }
 
-  div {
-    z-index: 1;
+    .title {
+      align-items: flex-start;
+      margin-top: 2rem;
+      padding: 0 1rem 0 1rem;
+      display: flex;
+      align-self: stretch;
+      flex-direction: column;
 
-    h3 {
-      text-align: center;
-      margin: auto;
+      & > a {
+        margin-top: 1rem;
+        margin-right: auto;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .title {
+        flex-basis: 50%;
+        margin-top: 0;
+        padding: 3rem;
+        align-self: center;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .title {
+        padding: 5rem;
+        align-self: center;
+        line-height: 1.75rem;
+      }
+    }
+
+    @media (min-width: 1240px) {
+      .title {
+        line-height: 2rem;
+      }
+    }
+
+    @media (min-width: 1340px) {
+      align-items: center;
+
+      div.title {
+        align-items: center;
+        margin-top: 0;
+      }
     }
   }
 
-  div.title {
-    align-items: flex-start;
-    padding: 0 15px 0 15px;
-    display: flex;
-    align-self: stretch;
-    flex-direction: column;
-  }
-
-  svg {
-    position: absolute;
-    width: 100%;
-    top: -50%;
-    color: ${({ theme, darkMode }) =>
-      darkMode ? theme.theme2.aboutBgCol : theme.theme1.aboutBgCol};
-    transition: color 0.3s ease-in;
-  }
-
-  @media (min-width: 768px) {
-    div.title {
-      padding: 50px;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    div.title {
-      padding: 100px 150px 50px 50px;
-    }
+  h3 {
+    text-align: center;
+    margin: auto;
   }
 `;

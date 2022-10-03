@@ -24,27 +24,26 @@ const About: React.FC<IAboutProps> = ({ about }) => {
         <Row>
           <h3>About Me</h3>
         </Row>
-        <div>
-          <HeroStyle>
-            <AboutImgStyle className="about">
-              <div>
-                <Image
-                  src={about[0].fields.photo}
-                  alt="ibrahim picture"
-                  layout="fill"
-                  priority={true}
-                />
-              </div>
-            </AboutImgStyle>
-            <div className="title">
-              <p>{about[0].fields.about}</p>
-              <Link href={cvLink}>
-                <a>
-                  <Button>View CV</Button>
-                </a>
-              </Link>
+
+        <div className="wrapper">
+          <AboutImgStyle>
+            <div>
+              <Image
+                src={about[0].fields.photo}
+                alt="ibrahim picture"
+                layout="fill"
+                priority={true}
+              />
             </div>
-          </HeroStyle>
+          </AboutImgStyle>
+          <div className="title">
+            <p>{about[0].fields.about}</p>
+            <Link href={cvLink}>
+              <a>
+                <Button>View CV</Button>
+              </a>
+            </Link>
+          </div>
         </div>
       </AboutStyle>
     </>

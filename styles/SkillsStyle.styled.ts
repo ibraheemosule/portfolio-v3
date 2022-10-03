@@ -2,11 +2,9 @@ import styled from "styled-components";
 import { IStyle } from "../ts-types/styleTypes";
 
 export default styled.section<IStyle>`
-  position: relative;
   display: flex;
   flex-direction: column;
-  width: 100%;
-  margin-top: -100px;
+  padding-top: 4rem;
   background: ${({ theme, darkMode }) =>
     darkMode ? theme.theme2.aboutBgCol : theme.theme1.aboutBgCol};
   transition: background-color 0.3s ease-in;
@@ -51,10 +49,5 @@ export default styled.section<IStyle>`
     .icon {
       flex-basis: 25%;
     }
-  }
-
-  @media (min-width: 1024px) {
-    padding-top: 50px;
-    margin-top: 0;
   }
 `;

@@ -23,8 +23,8 @@ margin-bottom: 50px;
   }
 
   div {
-
     aspect-ratio: auto;
+
     h3 {
       text-align: center;
       margin: 0 auto 40px;
@@ -32,10 +32,11 @@ margin-bottom: 50px;
     }
   }
 
-  div.title {
+  .title {
     padding: 0;
     display: flex;
     align-self: start;
+    align-items: start;
     flex-direction: column;
     margin-top: 0;
 
