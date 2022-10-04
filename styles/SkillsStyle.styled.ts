@@ -12,7 +12,6 @@ export default styled.section<IStyle>`
   h3 {
     margin: auto;
     text-align: center;
-    z-index: 1;
   }
 
   div {

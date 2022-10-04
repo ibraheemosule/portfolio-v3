@@ -1,67 +1,34 @@
 import styled from "styled-components";
-import { HeroStyle } from "./Hero.styled";
 import { IProjectsStyle } from "../ts-types/styleTypes";
 
-export const ProjectsStyle = styled(HeroStyle)<IProjectsStyle>`
-  position: relative;
-  width: 100%;
- margin-top: -20px;
-margin-bottom: 50px;
+export const ProjectsStyle = styled.section<IProjectsStyle>`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  line-height: 1.3;
+  letter-spacing: 2px;
 
-
-  section {
-
-    padding: 0 15px 0;
-    margin-top: 0;
-
-    @media (min-width: 768px) {
-      padding-top: 10px;
-    }
-    @media (min-width: 1024px) {
-      padding-top: 50px;
-    }
+  h3 {
+    text-align: center;
+    margin: 0 auto;
   }
 
-  div {
-    aspect-ratio: auto;
-
-    h3 {
-      text-align: center;
-      margin: 0 auto 40px;
-      }
-    }
+  section {
+    padding: 0 15px 0;
+    margin-top: 70px;
   }
 
   .title {
-    padding: 0;
+    flex-basis: 100%;
+    margin-top: 20px;
     display: flex;
     align-self: start;
     align-items: start;
     flex-direction: column;
-    margin-top: 0;
-
-    @media (min-width: 768px) {
-      padding: 0 15px;
-    }
-    
-    @media (min-width: 1024px) {
-      margin-top: 0;
-      padding: 0 0 0 50px;
-    }
-
-    @media (min-width: 1340px) {
-      margin-top: 0;
-      padding: 0 150px 0 50px;
-    }
 
     h4 {
       align-self: start;
       letter-spacing: 0;
-      margin-top: 70px;
-
-      @media (min-width: 768px) {
-        margin-top: 0;
-      }
     }
 
     p {
@@ -90,50 +57,36 @@ margin-bottom: 50px;
     }
   }
 
-  .reverse {
-    @media (min-width: 768px) {
-      flex-direction: row-reverse;
-
-      div.title {
-        padding: 0 0px 0 30px;
-        }
-  
-        div.img_container {
-           margin-left: -15px;
-        }
-    }
-
-    @media (min-width: 1024px){
-      div.img_container {
-        margin-left: 20px;
-     }
-    }
-
-    @media (min-width: 1240px){
-
-      div.title {
-        padding: 0 0px 0 150px;
-        }
-  
-        div.img_container {
-          margin-left: -100px;
-        }
-    }
-  }
-
-  @media (min-width: 576px){
+  @media (min-width: 576px) {
     margin-top: -30px;
+    padding: 0 3rem;
+    align-items: baseline;
   }
 
-  @media (min-width: 768px){
+  @media (min-width: 768px) {
     margin-top: -50px;
+    padding: 0;
+    gap: 10%;
+    justify-content: center;
+
+    .title {
+      flex-basis: 45%;
+      margin-top: 0;
+    }
+
+    .reverse {
+      flex-direction: row-reverse;
+    }
   }
 
-  @media (min-width: 1024px){
+  @media (min-width: 1024px) {
     margin-top: -70px;
+    margin-bottom: 0;
   }
 
-  @media (min-width: 1280px){
-    margin-top: -100px;
+  @media (min-width: 1240px) {
+    .title {
+      flex-basis: 40%;
+    }
   }
 `;

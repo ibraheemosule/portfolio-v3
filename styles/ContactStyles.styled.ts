@@ -30,13 +30,10 @@ export const ContactStyles = styled(Container)<IStyle>`
       }
     }
 
-    .media {
+    .wrapper {
       display: flex;
       margin-top: 25px;
 
-      a {
-        margin-top: -25px;
-      }
       ul {
         flex-grow: 1;
         display: flex;
@@ -81,7 +78,7 @@ export const ContactStyles = styled(Container)<IStyle>`
     margin-top: 150px;
 
     footer {
-      .media {
+      .wrapper {
         ul {
           display: none;
         }

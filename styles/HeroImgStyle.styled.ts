@@ -8,22 +8,6 @@ export const HeroImgStyle = styled.div<IStyle>`
   margin: auto;
   border-radius: 50%;
 
-  @media (min-width: 576px) {
-    flex-basis: 40%;
-    padding-top: 3rem;
-    aspect-ratio: 7/6;
-    border-radius: none;
-  }
-
-  @media (min-width: 768px) {
-    flex-basis: 50%;
-    padding: 30px;
-  }
-
-  @media (min-width: 1240px) {
-    flex-basis: 40%;
-  }
-
   div {
     padding-top: 100%;
     border-radius: 100%;
@@ -68,5 +52,25 @@ export const HeroImgStyle = styled.div<IStyle>`
       left: 0;
       transform: rotateZ(0deg);
     }
+  }
+
+  @media (min-width: 576px) {
+    flex-basis: 40%;
+    padding-top: 3rem;
+    aspect-ratio: 7/6;
+    border-radius: none;
+  }
+
+  @media (min-width: 768px) {
+    flex-basis: 50%;
+    padding: 30px;
+  }
+
+  @media (min-width: 1240px) {
+    flex-basis: 40%;
+  }
+
+  @media (min-width: 1440px) {
+    padding: 70px;
   }
 `;

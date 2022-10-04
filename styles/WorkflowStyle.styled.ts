@@ -5,7 +5,7 @@ export const WorkflowStyle = styled.section<IStyle>`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 0;
+  margin-top: 100px;
   padding: 0 15px;
 
   .wrapper {
@@ -92,7 +92,6 @@ export const WorkflowStyle = styled.section<IStyle>`
 
   @media (min-width: 768px) {
     padding: 0 50px;
-    margin-top: 50px;
   }
 
   @media (min-width: 1024px) {

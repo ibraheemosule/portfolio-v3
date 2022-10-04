@@ -1,8 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import { AboutStyle } from "../styles/AboutStyle.styled";
-import { HeroStyle } from "../styles/Hero.styled";
 import { AboutImgStyle } from "../styles/AboutImgStyle.styled";
-import Blob from "../assets/svgs/Blob2";
+import Blob from "../assets/svgs/Blob";
 import { Row } from "../styles/Row.styled";
 import { Button } from "../styles/Button.styled";
 import Link from "next/link";
