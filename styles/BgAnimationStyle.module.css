@@ -11,7 +11,7 @@
   font-size: 1.5em;
   font-family: Arial;
   text-shadow: 0 0 1px #000;
-  opacity: 0.1;
+  opacity: 0.05;
 }
 
 @-webkit-keyframes snowflakes-fall {
