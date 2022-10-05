@@ -21,7 +21,7 @@ const About: React.FC<IAboutProps> = ({ about }) => {
       <Blob />
       <AboutStyle darkMode={darkmode}>
         <Row>
-          <h3>About Me</h3>
+          <h3 id="About">About Me</h3>
         </Row>
 
         <div className="wrapper">

@@ -16,7 +16,7 @@ export default styled.section<IStyle>`
 
   div {
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     margin: 20px 0;
   }
 
@@ -24,7 +24,6 @@ export default styled.section<IStyle>`
     flex-direction: column;
     flex-basis: 150px;
     text-align: center;
-    justify-content: space-between;
 
     h5 {
       margin: auto;
@@ -40,13 +39,13 @@ export default styled.section<IStyle>`
 
   @media (min-width: 500px) {
     .icon {
-      flex-basis: 200px;
+      flex-basis: 150px;
     }
   }
 
-  @media (min-width: 850px) {
+  @media (min-width: 768px) {
     .icon {
-      flex-basis: 25%;
+      flex-basis: 200px;
     }
   }
 `;

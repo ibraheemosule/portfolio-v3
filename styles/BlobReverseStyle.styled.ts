@@ -24,6 +24,6 @@ export const BlobReverseStyle = styled.svg.attrs({
   }
 
   @media (min-width: 1240px) {
-    margin-top: -80px;
+    margin-top: -60px;
   }
 `;

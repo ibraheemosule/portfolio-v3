@@ -8,7 +8,7 @@ export const AllProjectsStyle = styled(MainBodyStyle)<IStyle>`
   margin: 0;
   flex-direction: column;
   justify-content: space-between;
-  padding: 20vh 0 100px 0px;
+  padding: 20vh 0 100px 0;
   min-height: 100vh;
 
   .container {
@@ -92,15 +92,35 @@ export const AllProjectsStyle = styled(MainBodyStyle)<IStyle>`
       }
     }
   }
+  @media (min-width: 500px) {
+    padding: 20vh 50px 100px 50px;
+  }
 
   @media (min-width: 576px) {
-    padding: 50px 15px 100px 50px;
+    padding: 50px 50px 100px 100px;
+  }
+
+  @media (min-width: 650px) {
+    padding: 50px 80px 100px 100px;
+  }
+
+  @media (min-width: 700px) {
+    padding: 50px 100px 100px 100px;
   }
 
   @media (min-width: 768px) {
+    padding: 50px 0 100px 60px;
     .container {
       .card {
         height: 280px;
+        flex-basis: 45%;
+      }
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      .card {
         flex-basis: 40%;
       }
     }

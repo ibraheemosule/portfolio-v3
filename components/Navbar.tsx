@@ -2,7 +2,7 @@ import { Navbar } from "../styles/Navbar.styled";
 import SMHandles from "./SMHandles";
 import LetterLogo from "../assets/svgs/Letter";
 import Link from "next/link";
-import { MouseEvent, useContext, useRef, useCallback } from "react";
+import { MouseEvent, useContext, useRef, useCallback, useEffect } from "react";
 import { Context } from "../assets/utils/Context";
 import { useRouter } from "next/router";
 import { INavProps } from "../ts-types/componentTypes";
@@ -22,6 +22,28 @@ const Nav: React.FC<INavProps> = ({ setEl }) => {
 
   const section = useRef<HTMLElement>(null);
 
+  const removeTransform = useCallback(() => {
+    setToggleIcon(false);
+    const el = section.current!;
+    let li;
+    let lists: Element[] | HTMLCollection[] = Array.from(el.children).map(
+      val => val.children
+    );
+    const [a] = lists;
+    lists = [...Array.from(a)];
+
+    for (li of lists as unknown as HTMLCollectionOf<HTMLLIElement>) {
+      li.removeAttribute("style");
+    }
+    el.removeAttribute("style");
+  }, [setToggleIcon]);
+
+  useEffect(() => {
+    window.addEventListener("resize", removeTransform);
+
+    return () => window.removeEventListener("resize", removeTransform);
+  }, [removeTransform]);
+
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const toggleNav = useCallback(() => {
     if (window.innerWidth >= 576) return;
@@ -29,10 +51,10 @@ const Nav: React.FC<INavProps> = ({ setEl }) => {
     setToggleIcon(toggle => !toggle);
 
     const el = section.current!;
-    el.style.display = "block";
+
     let li,
       time = 1;
-    if (!el) return;
+    // if (!el) return;
     let lists: Element[] | HTMLCollection[] = Array.from(el.children).map(
       val => val.children
     );
@@ -59,6 +81,7 @@ const Nav: React.FC<INavProps> = ({ setEl }) => {
   ) => {
     const innerText = e.currentTarget.textContent!;
     toggleNav();
+    console.log(innerText);
     const el = document.getElementById(innerText);
     if (router.pathname === "/AllProjects") {
       setEl(innerText);

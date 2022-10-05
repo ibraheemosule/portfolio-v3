@@ -9,7 +9,7 @@ const Contact = () => {
 
   return (
     <ContactStyles>
-      <h3 id="contact">Contact Me</h3>
+      <h3 id="Contact">Contact Me</h3>
       <footer>
         <div>
           <Image

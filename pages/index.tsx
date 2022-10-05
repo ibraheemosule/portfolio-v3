@@ -114,22 +114,11 @@ const MainBody: NextPage<IIndexPageProps> = props => {
           <Container>
             <Hero />
           </Container>
-          <div id="PersonAbout">
-            <About about={about} />
-          </div>
-
-          <div>
-            <Skills />
-          </div>
-          <div className="project-layout">
-            <ProjectsLayout projects={keyProjects} />
-          </div>
-          <div className="workflow">
-            <Workflow />
-          </div>
-          <div id="Contact">
-            <Contact />
-          </div>
+          <About about={about} />
+          <Skills />
+          <ProjectsLayout projects={keyProjects} />
+          <Workflow />
+          <Contact />
         </MainBodyStyle>
       </div>
     </>

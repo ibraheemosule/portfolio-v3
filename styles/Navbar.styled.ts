@@ -29,6 +29,7 @@ export const Navbar = styled.nav<INavbarStyle>`
 
   section {
     position: absolute;
+    display: block;
     z-index: 1;
     top: 100%;
     width: 100%;
@@ -54,11 +55,9 @@ export const Navbar = styled.nav<INavbarStyle>`
           background: none;
           outline: none;
           border: none;
-          padding: 10px 5px;
+          padding: 10px 10px;
           text-align: center;
           cursor: pointer;
-          margin-left: 5px;
-          margin-right: 5px;
           align-items: center;
           font-size: small;
 
