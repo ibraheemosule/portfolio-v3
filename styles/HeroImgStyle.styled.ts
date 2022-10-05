@@ -16,11 +16,6 @@ export const HeroImgStyle = styled.div<IStyle>`
     width: 100%;
     overflow: hidden;
 
-    span {
-      background: ${({ theme, darkMode }) =>
-        darkMode ? theme.theme2.bgCol : theme.theme1.bgCol} !important;
-    }
-
     img {
       position: absolute;
       top: 0;
@@ -30,6 +25,7 @@ export const HeroImgStyle = styled.div<IStyle>`
       opacity: 0.6;
       object-fit: contain;
       background: white;
+      border-radius: 100%;
     }
   }
   .img-wrapper-animate {

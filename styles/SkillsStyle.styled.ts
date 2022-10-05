@@ -22,7 +22,7 @@ export default styled.section<IStyle>`
 
   .icon {
     flex-direction: column;
-    flex-basis: 150px;
+    flex-basis: 120px;
     text-align: center;
 
     h5 {
