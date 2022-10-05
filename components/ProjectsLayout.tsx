@@ -9,6 +9,7 @@ const ProjectsLayout: React.FC<IAllProjectsProps> = ({ projects }) => {
       <Row>
         <h3>Projects</h3>
       </Row>
+
       <div>
         {projects.map((p, i) => (
           <Projects

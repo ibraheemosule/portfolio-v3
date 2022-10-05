@@ -2,17 +2,12 @@ import styled from "styled-components";
 import { IStyle } from "../ts-types/styleTypes";
 
 export const Button = styled.button<IStyle>`
-  margin: 25px auto 0 0;
   border: none;
   border-radius: 6px;
   background: ${({ theme }) => theme.theme1.navBgCol};
   color: ${({ theme }) => theme.theme1.navTextCol};
   font-weight: bolder;
   cursor: pointer;
-
-  @media (min-width: 768px) {
-    margin: 50px auto 0 0;
-  }
 
   text-transform: uppercase;
   padding: 0 1em;

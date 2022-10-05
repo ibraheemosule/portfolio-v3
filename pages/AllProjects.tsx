@@ -15,7 +15,7 @@ import Head from "next/head";
 const id = process.env.CONTENTFUL_SPACE_ID,
   token = process.env.CONTENTFUL_TOKEN;
 
-const paginateFunction = ({ arr, pageSize, pageNumber }: Paginate): any => {
+const paginateFunction = ({ arr, pageSize, pageNumber }: Paginate) => {
   const start = pageSize * (pageNumber - 1);
   const end = pageSize * pageNumber;
   return {

@@ -58,6 +58,16 @@ export const HeroStyle = styled.section<IStyle>`
     animation-fill-mode: forwards;
   }
 
+  @media (min-width: 576px) {
+    align-items: baseline;
+
+    div.title {
+      flex-basis: 60%;
+      padding-right: 5px;
+      order: 0;
+    }
+  }
+
   @media (min-width: 768px) {
     align-items: baseline;
 

@@ -1,8 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import { AboutStyle } from "../styles/AboutStyle.styled";
-import { HeroStyle } from "../styles/Hero.styled";
 import { AboutImgStyle } from "../styles/AboutImgStyle.styled";
-import Blob from "../assets/svgs/Blob2";
+import Blob from "../assets/svgs/Blob";
 import { Row } from "../styles/Row.styled";
 import { Button } from "../styles/Button.styled";
 import Link from "next/link";
@@ -22,29 +21,28 @@ const About: React.FC<IAboutProps> = ({ about }) => {
       <Blob />
       <AboutStyle darkMode={darkmode}>
         <Row>
-          <h3>About Me</h3>
+          <h3 id="About">About Me</h3>
         </Row>
-        <div>
-          <HeroStyle>
-            <AboutImgStyle className="about">
-              <div>
-                <Image
-                  src={about[0].fields.photo}
-                  alt="ibrahim picture"
-                  layout="fill"
-                  priority={true}
-                />
-              </div>
-            </AboutImgStyle>
-            <div className="title">
-              <p>{about[0].fields.about}</p>
-              <Link href={cvLink}>
-                <a>
-                  <Button>View CV</Button>
-                </a>
-              </Link>
+
+        <div className="wrapper">
+          <AboutImgStyle>
+            <div>
+              <Image
+                src={about[0].fields.photo}
+                alt="ibrahim picture"
+                layout="fill"
+                priority={true}
+              />
             </div>
-          </HeroStyle>
+          </AboutImgStyle>
+          <div className="title">
+            <p>{about[0].fields.about}</p>
+            <Link href={cvLink}>
+              <a>
+                <Button>View CV</Button>
+              </a>
+            </Link>
+          </div>
         </div>
       </AboutStyle>
     </>

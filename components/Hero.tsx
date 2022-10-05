@@ -16,7 +16,7 @@ const Hero: React.FC<IHeroProps> = ({ darkMode }) => {
         </div>
         <HeroImgStyle darkMode={darkMode}>
           <div className="img_wrapper img-wrapper-animate">
-            <Image src={images.avi} alt="avi" layout="fill" />
+            <Image src={images.avi} alt="avi" priority={true} layout="fill" />
           </div>
         </HeroImgStyle>
       </HeroStyle>

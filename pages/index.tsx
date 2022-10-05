@@ -23,18 +23,19 @@ export async function getStaticProps() {
     accessToken: token,
   });
 
-  const res = await clients.getEntries({
-    content_type: "projects",
-  });
-
-  const about = await clients.getEntries({
-    content_type: "about",
-  });
+  const res = await Promise.all([
+    clients.getEntries({
+      content_type: "projects",
+    }),
+    await clients.getEntries({
+      content_type: "about",
+    }),
+  ]);
 
   return {
     props: {
-      projects: res.items,
-      about: about.items,
+      projects: res[0].items,
+      about: res[1].items,
       revalidate: 60,
     },
   };
@@ -113,22 +114,11 @@ const MainBody: NextPage<IIndexPageProps> = props => {
           <Container>
             <Hero />
           </Container>
-          <div id="PersonAbout">
-            <About about={about} />
-          </div>
-
-          <div>
-            <Skills />
-          </div>
-          <div className="project-layout">
-            <ProjectsLayout projects={keyProjects} />
-          </div>
-          <div className="workflow">
-            <Workflow />
-          </div>
-          <div id="Contact">
-            <Contact />
-          </div>
+          <About about={about} />
+          <Skills />
+          <ProjectsLayout projects={keyProjects} />
+          <Workflow />
+          <Contact />
         </MainBodyStyle>
       </div>
     </>

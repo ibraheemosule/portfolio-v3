@@ -9,7 +9,7 @@ const Contact = () => {
 
   return (
     <ContactStyles>
-      <h3 id="contact">Contact Me</h3>
+      <h3 id="Contact">Contact Me</h3>
       <footer>
         <div>
           <Image
@@ -28,7 +28,7 @@ const Contact = () => {
             your amazing project ideas? Or do you have other opportunities you
             would like to share with me?
           </p>
-          <div className="media">
+          <div className="wrapper">
             <a href="mailto:ibraheemsulay@gmail.com" rel="noreferrer">
               <Button>Email Me </Button>
             </a>

@@ -7,22 +7,6 @@ export const HeroImgStyle = styled.div<IStyle>`
   aspect-ratio: 1/1;
   margin: auto;
   border-radius: 50%;
-  overflow: hidden;
-
-  @media (min-width: 576px) {
-    flex-basis: 70%;
-    aspect-ratio: 7/6;
-    border-radius: none;
-    overflow: initial;
-  }
-  @media (min-width: 768px) {
-    flex-basis: 50%;
-    padding: 30px;
-  }
-
-  @media (min-width: 1240px) {
-    padding: 150px;
-  }
 
   div {
     padding-top: 100%;
@@ -31,11 +15,6 @@ export const HeroImgStyle = styled.div<IStyle>`
     position: relative;
     width: 100%;
     overflow: hidden;
-
-    span {
-      background: ${({ theme, darkMode }) =>
-        darkMode ? theme.theme2.bgCol : theme.theme1.bgCol} !important;
-    }
 
     img {
       position: absolute;
@@ -46,6 +25,7 @@ export const HeroImgStyle = styled.div<IStyle>`
       opacity: 0.6;
       object-fit: contain;
       background: white;
+      border-radius: 100%;
     }
   }
   .img-wrapper-animate {
@@ -68,5 +48,25 @@ export const HeroImgStyle = styled.div<IStyle>`
       left: 0;
       transform: rotateZ(0deg);
     }
+  }
+
+  @media (min-width: 576px) {
+    flex-basis: 40%;
+    padding-top: 3rem;
+    aspect-ratio: 7/6;
+    border-radius: none;
+  }
+
+  @media (min-width: 768px) {
+    flex-basis: 50%;
+    padding: 30px;
+  }
+
+  @media (min-width: 1240px) {
+    flex-basis: 40%;
+  }
+
+  @media (min-width: 1440px) {
+    padding: 70px;
   }
 `;

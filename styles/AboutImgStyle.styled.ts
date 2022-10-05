@@ -1,19 +1,16 @@
 import styled from "styled-components";
-import { HeroImgStyle } from "./HeroImgStyle.styled";
 import { IStyle } from "../ts-types/styleTypes";
 
-export const AboutImgStyle = styled(HeroImgStyle)<IStyle>`
+export const AboutImgStyle = styled.div<IStyle>`
+  flex-basis: 80%;
+  margin: auto;
+  aspect-ratio: 1/1;
+  margin: auto;
+  border-radius: 50%;
   padding-top: 50px;
-  padding-bottom: 0;
-  border-radius: 0;
-  overflow: initial;
-
-  @media (min-width: 768px) {
-    padding-top: 100px;
-    padding-bottom: 100px;
-  }
 
   div {
+    padding-top: 100%;
     border-radius: 52% 87% 30% 75% / 49% 60% 31% 56%;
     box-shadow: 3px 4.1px 7.3px rgba(0, 0, 0, 0.045),
       24px 33px 58px rgba(0, 0, 0, 0.09);
@@ -32,5 +29,40 @@ export const AboutImgStyle = styled(HeroImgStyle)<IStyle>`
       object-position: 0% 0%;
       filter: grayscale(100%);
     }
+  }
+
+  @media (min-width: 576px) {
+    flex-basis: 70%;
+    aspect-ratio: 7/6;
+    border-radius: none;
+    overflow: initial;
+  }
+
+  @media (min-width: 768px) {
+    flex-basis: 50%;
+    padding: 1rem;
+  }
+
+  @media (min-width: 830px) {
+    flex-basis: 50%;
+    padding: 1rem 1rem 0 4rem;
+  }
+
+  @media (min-width: 900px) {
+    flex-basis: 42%;
+  }
+
+  @media (min-width: 992px) {
+    flex-basis: 40%;
+    padding: 2rem 1rem 0 5rem;
+  }
+
+  @media (min-width: 1024px) {
+    flex-basis: 50%;
+    padding: 1.5rem 1rem 0 5rem;
+  }
+
+  @media (min-width: 1240px) {
+    padding: 100px 150px 0;
   }
 `;

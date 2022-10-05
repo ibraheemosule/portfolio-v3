@@ -20,49 +20,19 @@ const GlobalStyle = createGlobalStyle<GlobalProps>`
 
 body {
     width: 100vw;
-   // overflow-x: hidden;
     font-size: 16px;
     background: ${({ theme, darkMode }) =>
       darkMode ? theme.theme2.bgCol : theme.theme1.bgCol};
 }
 
-h1,
-  h2,
-  h3
-   {
+h1, h2, h3, h4 {
     text-transform: capitalize;
     font-size: 2.5rem;
     transition: color .3s ease-in;
-
-    @media (min-width: 576px) {
-      font-size: 3.5rem;
-    }
-    @media (min-width: 768px) {
-      font-size: 2.5rem;
-    }
-    @media (min-width: 992px) {
-      font-size: 4rem;
-    }
-    @media (min-width: 1200px) {
-      font-size: 5rem;
-    }
   }
 
   h3 {
     font-size: 1.5rem;
-
-    @media (min-width: 576px) {
-      font-size: 2rem;
-    }
-    @media (min-width: 768px) {
-      font-size: 1.5rem;
-    }
-    @media (min-width: 992px) {
-      font-size: 2.5rem;
-    }
-    @media (min-width: 1200px) {
-      font-size: 3rem;
-    }
 
     &::after {
       content: "";
@@ -79,20 +49,6 @@ h1,
 
   h4 {
     font-size: 1.2rem;
-    text-transform: capitalize;
-
-    @media (min-width: 576px) {
-      font-size: 1.3rem;
-    }
-    @media (min-width: 768px) {
-      font-size: 1.1rem;
-    }
-    @media (min-width: 992px) {
-      font-size: 1.2rem;
-    }
-    @media (min-width: 1200px) {
-      font-size: 1.5rem;
-    }
   }
 
   p {
@@ -100,9 +56,6 @@ h1,
     color: ${({ darkMode }) =>
       darkMode ? "rgba(255, 255, 255, 0.868)" : "rgba(0, 0, 0, 0.868)"};
 
-    @media (min-width: 1024px) {
-      font-size: 1.2rem;
-    }
   }
 
   .skills {
@@ -133,9 +86,65 @@ h1,
       transform: translate(-100%, -100%);
 
     }
-
-
   }
+
+  @media (min-width: 576px){
+    h1, h3 {
+      font-size: 2rem;
+    }
+
+  h4 {
+      font-size: 1.3rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    h1 {
+    font-size: 2.5rem;
+    }
+    
+    h3 {
+      font-size: 1.5rem;
+    }
+
+    h4 {
+      font-size: 1.1rem;
+    }
+  }
+
+  @media (min-width: 992px) {
+    h1 {
+    font-size: 4rem;
+    }
+
+    h3 {
+      font-size: 2.5rem;
+    }
+
+    h4 {
+      font-size: 1.2rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    p {
+    font-size: 1.2rem;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    h1 {
+      font-size: 5rem;
+    }
+
+    h3 {
+      font-size: 3rem;
+    }
+    
+    h4 {
+      font-size: 1.5rem;
+    }
+}
 `;
 
 export default GlobalStyle;
