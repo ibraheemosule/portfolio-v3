@@ -63,7 +63,23 @@ export const AboutStyle = styled.section<IStyle>`
       div.title {
         align-items: center;
         margin-top: 0;
+
+        p {
+          padding-right: 7rem;
+        }
       }
+    }
+  }
+
+  @media (min-width: 1240px) {
+    .about-title {
+      margin-bottom: -3rem;
+    }
+  }
+
+  @media (min-width: 1400px) {
+    .about-title {
+      margin-bottom: -5rem;
     }
   }
 

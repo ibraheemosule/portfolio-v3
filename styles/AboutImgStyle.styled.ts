@@ -63,6 +63,11 @@ export const AboutImgStyle = styled.div<IStyle>`
   }
 
   @media (min-width: 1240px) {
-    padding: 100px 150px 0;
+    //margin-top: -5rem;
+    padding: 6.25rem 1.75rem 6.25rem 11.375rem;
+  }
+
+  @media (min-width: 1375px) {
+    padding: 8.25rem 1.75rem 8.25rem 14.375rem;
   }
 `;
