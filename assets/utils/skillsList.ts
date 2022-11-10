@@ -16,6 +16,7 @@ import JestIcon from "../svgs/JestIcon";
 import NextjsIcon from "../svgs/NextjsIcon";
 import MongodbIcon from "../svgs/MongodbIcon";
 import NodeIcon from "../svgs/NodeIcon";
+import DockerIcon from "../svgs/DockerIcon";
 
 const skillsList = [
   { Icon: CssIcon, name: "css" },
@@ -36,6 +37,7 @@ const skillsList = [
   { Icon: NextjsIcon, name: "next" },
   { Icon: MongodbIcon, name: "mongodb" },
   { Icon: NodeIcon, name: "node.js" },
+  { Icon: DockerIcon, name: "docker" },
 ];
 
 export default skillsList;
