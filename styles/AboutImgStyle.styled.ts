@@ -44,7 +44,6 @@ export const AboutImgStyle = styled.div<IStyle>`
   }
 
   @media (min-width: 830px) {
-    flex-basis: 50%;
     padding: 1rem 1rem 0 4rem;
   }
 
@@ -54,16 +53,21 @@ export const AboutImgStyle = styled.div<IStyle>`
 
   @media (min-width: 992px) {
     flex-basis: 40%;
-    padding: 2rem 1rem 0 5rem;
+    padding: 2rem 0 0 5rem;
   }
 
   @media (min-width: 1024px) {
-    flex-basis: 50%;
+    flex-basis: 40%;
+    padding: 1.5rem 1rem 0 5rem;
+  }
+
+  @media (min-width: 1120px) {
+    flex-basis: 35%;
     padding: 1.5rem 1rem 0 5rem;
   }
 
   @media (min-width: 1240px) {
-    //margin-top: -5rem;
+    flex-basis: 40%;
     padding: 6.25rem 1.75rem 6.25rem 11.375rem;
   }
 

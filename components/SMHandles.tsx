@@ -6,6 +6,7 @@ import FacebookLogo from "../assets/svgs/FacebookLogo";
 import { useContext } from "react";
 import { SMHandlesStyle } from "../styles/SMHandlesStyle.styled";
 import { Context } from "../assets/utils/Context";
+import Link from "next/link";
 
 const SMHandles = () => {
   const { darkmode } = useContext(Context);
@@ -30,11 +31,7 @@ const SMHandles = () => {
         </a>
       </li>
       <li>
-        <a
-          href="mailto:ibraheemsulay@gmail.com"
-          target="_blank"
-          rel="noreferrer"
-        >
+        <a href="/#Contact" rel="noreferrer">
           <EmailLogo />
         </a>
       </li>

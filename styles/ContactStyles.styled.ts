@@ -32,7 +32,84 @@ export const ContactStyles = styled(Container)<IStyle>`
 
     .wrapper {
       display: flex;
+      flex-wrap: wrap;
+      min-height: 400px;
       margin-top: 25px;
+
+      .feedback {
+        flex-basis: 100%;
+      }
+
+      form {
+        flex-basis: 100%;
+        margin-bottom: 2rem;
+
+        div {
+          margin: 0.5rem 0 2rem;
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+
+          label {
+            display: block;
+            font-weight: 600;
+            flex-basis: 100%;
+            text-transform: capitalize;
+          }
+
+          input,
+          textarea {
+            all: unset;
+            flex-basis: 100%;
+            display: block;
+            border-bottom: 1px solid
+              ${({ theme, darkMode }) =>
+                darkMode ? theme.theme1.navTextCol : theme.theme1.navBgCol};
+            color: inherit;
+            caret-color: #7e8008;
+            padding: 0.5rem;
+            background: transparent;
+            font-size: 1rem;
+            font-weight: 300;
+            letter-spacing: 0.1rem;
+          }
+
+          input:focus {
+            outline: none;
+          }
+
+          textarea {
+            resize: none;
+            border: 1px solid
+              ${({ theme, darkMode }) =>
+                darkMode ? theme.theme1.navTextCol : theme.theme1.navBgCol};
+            border-radius: 5px;
+            height: 100px;
+            margin-top: 1rem;
+          }
+        }
+
+        .btn-wrapper {
+          display: flex;
+          position: relative;
+          align-items: center;
+          flex-basis: 100%;
+          justify-content: flex-start;
+
+          button:nth-child(2) {
+            justify-self: center;
+            margin: auto;
+          }
+
+          span {
+            position: absolute;
+            width: 100%;
+            text-align: right;
+            bottom: -5px;
+            font-weight: bold;
+          }
+        }
+      }
 
       ul {
         flex-grow: 1;
@@ -79,6 +156,8 @@ export const ContactStyles = styled(Container)<IStyle>`
 
     footer {
       .wrapper {
+        width: 100%;
+
         ul {
           display: none;
         }
@@ -90,6 +169,20 @@ export const ContactStyles = styled(Container)<IStyle>`
     footer {
       div {
         width: 40%;
+      }
+    }
+  }
+
+  @media (min-width: 1024px) {
+    footer {
+      .wrapper {
+        form {
+          .btn-wrapper {
+            span {
+              text-align: center;
+            }
+          }
+        }
       }
     }
   }

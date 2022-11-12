@@ -45,7 +45,7 @@ export const AboutStyle = styled.section<IStyle>`
 
     @media (min-width: 1024px) {
       .title {
-        padding: 5rem;
+        padding: 5rem 7rem 5rem 2rem;
         align-self: center;
         line-height: 1.75rem;
       }
