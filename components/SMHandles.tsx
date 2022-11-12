@@ -31,9 +31,11 @@ const SMHandles = () => {
         </a>
       </li>
       <li>
-        <a href="/#Contact" rel="noreferrer">
-          <EmailLogo />
-        </a>
+        <Link href="/#Contact" passHref>
+          <a>
+            <EmailLogo />
+          </a>
+        </Link>
       </li>
       <li>
         <a
