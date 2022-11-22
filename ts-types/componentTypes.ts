@@ -22,7 +22,7 @@ export interface IAllProjectsProps extends DarkMode {
   projects: IProject[];
 }
 
-export interface IIndexPageProps {
+export interface IHomePageProps {
   projects: IProject[];
   darkMode?: boolean;
   about: any;

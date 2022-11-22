@@ -19,7 +19,7 @@ const navList = [
     name: "Skills",
   },
   {
-    href: "/AllProjects",
+    href: "/Projects",
     Icon: FileLogo,
     name: "Projects",
   },
