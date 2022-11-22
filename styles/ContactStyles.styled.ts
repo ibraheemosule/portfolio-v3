@@ -66,7 +66,7 @@ export const ContactStyles = styled(Container)<IStyle>`
               ${({ theme, darkMode }) =>
                 darkMode ? theme.theme1.navTextCol : theme.theme1.navBgCol};
             color: inherit;
-            caret-color: #7e8008;
+            caret-color: #2c344a;
             padding: 0.5rem;
             background: transparent;
             font-size: 1rem;

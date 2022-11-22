@@ -57,20 +57,20 @@ const Contact = () => {
 
   return (
     <ContactStyles darkMode={darkmode}>
-      <h3 id="Contact">Contact Me</h3>
+      <h3>Contact Me</h3>
       <footer>
         <div>
           <Image
             src={img.email}
             height="90"
             width="100"
-            alt="contact me picture"
+            alt="email delivery man"
             layout="responsive"
             priority={true}
           />
         </div>
         <div>
-          <h4>Reach out in one click</h4>
+          <h4 id="Contact">Reach out in one click</h4>
           <p>
             Want to have a cup of coffee with me while we talk about building
             your amazing project ideas? Or do you have other opportunities you

@@ -109,7 +109,7 @@ const AllProjects: NextPage<IAllProjectsProps> = ({ projects }) => {
         darkMode={darkmode}
         onTouchStart={() => setToggle(false)}
       >
-        <Container className="container">
+        <div className="container">
           <div className="title">
             <h3>All Projects</h3>
           </div>
@@ -134,7 +134,7 @@ const AllProjects: NextPage<IAllProjectsProps> = ({ projects }) => {
               </div>
             </div>
           ))}
-        </Container>
+        </div>
         <Pagination
           number={number}
           numOfPages={numOfPages}

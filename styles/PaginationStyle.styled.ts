@@ -3,7 +3,8 @@ import { Container } from "./Container.styled";
 
 export const PaginationStyle = styled(Container)`
 
-    margin-top: 40px;
+    z-index: 1;
+    margin-top: 70px;
     display: flex;
     justify-content: center;
     font-size: 1rem;
@@ -11,8 +12,8 @@ export const PaginationStyle = styled(Container)`
       darkMode ? "rgba(255, 255, 255, 0.868)" : "rgba(0, 0, 0, 0.868)"};
 
     button {
-    margin-right: 10px;
-    margin-left: 10px;
+      margin-right: 10px;
+      margin-left: 10px;
       border: none;
       outline: none;
       background: none;

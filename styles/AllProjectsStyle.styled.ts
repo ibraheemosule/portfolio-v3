@@ -4,16 +4,17 @@ import { IStyle } from "../ts-types/styleTypes";
 
 export const AllProjectsStyle = styled(MainBodyStyle)<IStyle>`
   display: flex;
-  min-width: 100vw;
+  min-width: 100%;
   margin: 0;
   flex-direction: column;
   justify-content: space-between;
-  padding: 20vh 0 100px 0;
+  padding: 9.375rem 0.9rem 100px;
   min-height: 100vh;
 
   .container {
     display: flex;
     flex-basis: 100%;
+    margin: auto;
     flex-wrap: wrap;
     justify-content: space-around;
 
@@ -110,6 +111,7 @@ export const AllProjectsStyle = styled(MainBodyStyle)<IStyle>`
 
   @media (min-width: 768px) {
     padding: 50px 0 100px 60px;
+
     .container {
       .card {
         height: 280px;
@@ -120,8 +122,20 @@ export const AllProjectsStyle = styled(MainBodyStyle)<IStyle>`
 
   @media (min-width: 1024px) {
     .container {
+      max-width: 95%;
+
       .card {
-        flex-basis: 40%;
+        flex-basis: 45%;
+      }
+    }
+  }
+
+  @media (min-width: 1240px) {
+    .container {
+      max-width: 80%;
+
+      .card {
+        flex-basis: 45%;
       }
     }
   }

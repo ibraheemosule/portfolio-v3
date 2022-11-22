@@ -12,8 +12,8 @@ const Layout: React.FC<ILayout> = ({ children }) => {
   return (
     <LayoutStyle darkMode={darkmode}>
       <button className="darkmode" onClick={() => toggleDarkmode()}>
-        <span className="light">Light</span>
-        <span className="dark">Dark</span>
+        <span className="light">Light Theme</span>
+        <span className="dark">Dark Theme</span>
       </button>
       <Nav el={el} setEl={setEl} />
       <div>{cloneElement(children, { el, setEl })}</div>
