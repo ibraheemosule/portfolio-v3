@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Container } from "../../others/Container.styled";
+import { Container } from "../Container.styled";
 
 export const PaginationStyle = styled(Container)`
 

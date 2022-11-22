@@ -1,10 +1,10 @@
 import { WorkflowStyle } from "./WorkFlowStyle";
-import CommunicationIcon from "../../../../assets/svgs/CommunicationIcon";
-import ProblemSolvingIcon from "../../../../assets/svgs/ProblemSolvingIcon";
-import CriticalThinkingIcon from "../../../../assets/svgs/CriticalThinkingIcon";
-import EmpathyIcon from "../../../../assets/svgs/EmpathyIcon";
+import CommunicationIcon from "../../../../../src/assets/svgs/CommunicationIcon";
+import ProblemSolvingIcon from "../../../../../src/assets/svgs/ProblemSolvingIcon";
+import CriticalThinkingIcon from "../../../../../src/assets/svgs/CriticalThinkingIcon";
+import EmpathyIcon from "../../../../../src/assets/svgs/EmpathyIcon";
 import { useContext } from "react";
-import { Context } from "../../../../assets/utils/Context";
+import { Context } from "../../../../../src/assets/utils/Context";
 
 const WorkFlow = () => {
   const { darkmode } = useContext(Context);

@@ -6,7 +6,7 @@ import { Paginate } from "../../../ts-types/dataTypes";
 import { useState, useEffect } from "react";
 import Pagination from "../../others/Pagination/Pagination";
 import { useContext } from "react";
-import { Context } from "../../../assets/utils/Context";
+import { Context } from "../../../../src/assets/utils/Context";
 
 const paginateFunction = ({ arr, pageSize, pageNumber }: Paginate) => {
   const start = pageSize * (pageNumber - 1);

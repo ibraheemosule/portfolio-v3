@@ -3,7 +3,7 @@ import Nav from "../Navbar/Navbar";
 import { ILayout } from "../../ts-types/componentTypes";
 
 import { useContext, useState, cloneElement } from "react";
-import { Context } from "../../assets/utils/Context";
+import { Context } from "../../../src/assets/utils/Context";
 import BgAnimation from "../BgAnimation/BgAnimation";
 
 const Layout: React.FC<ILayout> = ({ children }) => {

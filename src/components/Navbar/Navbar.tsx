@@ -1,12 +1,12 @@
 import { Navbar } from "./Navbar.styled";
 import SMHandles from "../others/SMhandles/SMHandles";
-import LetterLogo from "../../assets/svgs/Letter";
+import LetterLogo from "../../../src/assets/svgs/Letter";
 import Link from "next/link";
 import { MouseEvent, useContext, useRef, useCallback, useEffect } from "react";
-import { Context } from "../../assets/utils/Context";
+import { Context } from "../../../src/assets/utils/Context";
 import { useRouter } from "next/router";
 import { INavProps } from "../../ts-types/componentTypes";
-import navList from "../../assets/utils/navList";
+import navList from "../../../src/assets/utils/navList";
 
 const menuIconClass = ["first", "second", "third"];
 

@@ -1,7 +1,7 @@
 import { HeroStyle } from "./Hero.styled";
 import { HeroImgStyle } from "./HeroImgStyle.styled";
 import Image from "next/image";
-import images from "../../../../assets/img/image";
+import images from "../../../../../src/assets/img/image";
 import { IHeroProps } from "../../../../ts-types/componentTypes";
 
 const Hero: React.FC<IHeroProps> = ({ darkMode }) => {

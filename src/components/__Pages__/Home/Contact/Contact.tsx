@@ -1,10 +1,10 @@
 import { ContactStyles } from "./ContactStyles.styled";
-import img from "../../../../assets/img/image";
+import img from "../../../../../src/assets/img/image";
 import SMHandles from "../../../others/SMhandles/SMHandles";
 import { Button } from "../../../others/Button.styled";
 import Image from "next/image";
 import React, { useContext, useRef, useState } from "react";
-import { Context } from "../../../../assets/utils/Context";
+import { Context } from "../../../../../src/assets/utils/Context";
 import emailjs from "@emailjs/browser";
 import { Loader } from "../../../others/Loader.styled";
 

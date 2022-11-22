@@ -2,9 +2,9 @@ import SkillsStyle from "./SkillsStyle.styled";
 import { Row } from "../../../others/Row.styled";
 import { ISkillsProps } from "../../../../ts-types/componentTypes";
 import { useContext } from "react";
-import { Context } from "../../../../assets/utils/Context";
-import BlobReverse from "../../../../assets/svgs/BlobReverse";
-import skillsList from "../../../../assets/utils/skillsList";
+import { Context } from "../../../../../src/assets/utils/Context";
+import BlobReverse from "../../../../../src/assets/svgs/BlobReverse";
+import skillsList from "../../../../../src/assets/utils/skillsList";
 
 const Skills: React.FC<ISkillsProps> = () => {
   const { darkmode } = useContext(Context);

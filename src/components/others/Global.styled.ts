@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import { ThemeType } from "../../assets/utils/theme";
+import { ThemeType } from "../../../src/assets/utils/theme";
 
 interface GlobalProps {
   theme: ThemeType;

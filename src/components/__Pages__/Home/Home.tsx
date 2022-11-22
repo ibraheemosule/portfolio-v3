@@ -7,7 +7,7 @@ import ProjectsLayout from "./ProjectsLayout/ProjectsLayout";
 import Workflow from "./WorkFlow/WorkFlow";
 import Contact from "./Contact/Contact";
 import { IHomePageProps } from "../../../ts-types/componentTypes";
-import { Context } from "../../../assets/utils/Context";
+import { Context } from "../../../../src/assets/utils/Context";
 import { useContext, useEffect } from "react";
 
 const Home: React.FC<IHomePageProps> = props => {
