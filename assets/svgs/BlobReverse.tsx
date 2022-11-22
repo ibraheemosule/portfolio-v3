@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Context } from "../utils/Context";
-import theme from "../../styles/theme";
-import { BlobReverseStyle } from "../../styles/BlobReverseStyle.styled";
+import theme from "../utils/theme";
+import { BlobReverseStyle } from "../../components/others/BlobReverseStyle.styled";
 
 const BlobReverse: React.FC = () => {
   const { darkmode } = useContext(Context);

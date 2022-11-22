@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Context } from "../utils/Context";
-import theme from "../../styles/theme";
-import { BlobStyle } from "../../styles/BlobStyle.styled";
+import theme from "../utils/theme";
+import { BlobStyle } from "../../components/others/BlobStyle.styled";
 
 const Blob2: React.FC = () => {
   const { darkmode } = useContext(Context);

@@ -1,8 +1,8 @@
 import type { AppProps } from "next/app";
 import { ThemeProvider } from "styled-components";
-import theme from "../styles/theme";
-import GlobalStyle from "../styles/Global.styled";
-import Layout from "../components/Layout";
+import theme from "../assets/utils/theme";
+import GlobalStyle from "../components/others/Global.styled";
+import Layout from "../components/Layout/Layout";
 import { Context } from "../assets/utils/Context";
 import { useState, useEffect } from "react";
 

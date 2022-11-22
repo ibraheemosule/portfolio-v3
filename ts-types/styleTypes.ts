@@ -1,4 +1,4 @@
-import { ThemeType } from "../styles/theme";
+import { ThemeType } from "../assets/utils/theme";
 
 export interface IStyle {
   theme: ThemeType;
