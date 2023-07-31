@@ -109,37 +109,43 @@ const AllProjects: NextPage<IAllProjectsProps> = ({ projects }) => {
         darkMode={darkmode}
         onTouchStart={() => setToggle(false)}
       >
-        <Container className="container">
-          <div className="title">
-            <h3>All Projects</h3>
-          </div>
+        <section>
+          <Container className="container">
+            <div className="title">
+              <h3>All Projects</h3>
+            </div>
 
-          {projectsToShow.map((p: any, i: number) => (
-            <div className="card" key={p.sys.id}>
-              <Image src={p.fields.photo} alt="project webpage" layout="fill" />
-              <div className="details">
-                <h4>{p.fields.title}</h4>
-                <p>
-                  <strong>Summary:</strong> <small>{p.fields.summary}</small>
-                </p>
-                <p>
-                  <strong>Tools:</strong>{" "}
-                  <small>{p.fields.tool.join(", ")}</small>
-                </p>
-                <div>
-                  <a href={p.fields.link} target="_blank" rel="noreferrer">
-                    <Button className="btn">View Project</Button>
-                  </a>
+            {projectsToShow.map((p: any, i: number) => (
+              <div className="card" key={p.sys.id}>
+                <Image
+                  src={p.fields.photo}
+                  alt="project webpage"
+                  layout="fill"
+                />
+                <div className="details">
+                  <h4>{p.fields.title}</h4>
+                  <p>
+                    <strong>Summary:</strong> <small>{p.fields.summary}</small>
+                  </p>
+                  <p>
+                    <strong>Tools:</strong>{" "}
+                    <small>{p.fields.tool.join(", ")}</small>
+                  </p>
+                  <div>
+                    <a href={p.fields.link} target="_blank" rel="noreferrer">
+                      <Button className="btn">View Project</Button>
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </Container>
-        <Pagination
-          number={number}
-          numOfPages={numOfPages}
-          setNumber={setNumber}
-        />
+            ))}
+          </Container>
+          <Pagination
+            number={number}
+            numOfPages={numOfPages}
+            setNumber={setNumber}
+          />
+        </section>
       </AllProjectsStyle>
     </>
   );

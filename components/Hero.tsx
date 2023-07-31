@@ -3,10 +3,11 @@ import { HeroImgStyle } from "../styles/HeroImgStyle.styled";
 import Image from "next/image";
 import images from "../assets/img/image";
 import { IHeroProps } from "../ts-types/componentTypes";
+import { Container } from "../styles/Container.styled";
 
 const Hero: React.FC<IHeroProps> = ({ darkMode }) => {
   return (
-    <div className="hero-component">
+    <Container>
       <HeroStyle>
         <div className="title">
           <h1 className="hero_title">Hi, My name is ibrahim</h1>
@@ -20,7 +21,7 @@ const Hero: React.FC<IHeroProps> = ({ darkMode }) => {
           </div>
         </HeroImgStyle>
       </HeroStyle>
-    </div>
+    </Container>
   );
 };
 

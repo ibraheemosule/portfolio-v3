@@ -5,7 +5,6 @@ import { IStyle } from "../ts-types/styleTypes";
 export const LayoutStyle = styled(Row)<IStyle>`
   height: 100vh;
   position: relative;
-  max-width: 1500px;
   margin: auto;
   display: block;
   color: ${({ theme, darkMode }) =>
@@ -42,6 +41,10 @@ export const LayoutStyle = styled(Row)<IStyle>`
 
   @media (min-width: 576px) {
     display: flex;
+
+    & > div {
+      flex-grow: 1;
+    }
     .darkmode {
       top: 2%;
     }

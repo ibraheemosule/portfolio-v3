@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import { IStyle } from "../ts-types/styleTypes";
+import { Container } from "./Container.styled";
 
-export const WorkflowStyle = styled.section<IStyle>`
+export const WorkflowStyle = styled(Container)<IStyle>`
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -9,9 +9,10 @@ import Image from "next/image";
 import { IAboutProps } from "../ts-types/componentTypes";
 import { useContext } from "react";
 import { Context } from "../assets/utils/Context";
+import { Container } from "../styles/Container.styled";
 
 const cvLink =
-  "https://drive.google.com/file/d/1ZAw-5fqQTuKxcDGMWDk9pgYzPD56th-1/view?usp=sharing";
+  "https://drive.google.com/file/d/1gwyWvAQpKLHelvdFyELciAJoQlPhqzyM/view?usp=drive_link";
 
 const About: React.FC<IAboutProps> = ({ about }) => {
   const { darkmode } = useContext(Context);
@@ -20,30 +21,30 @@ const About: React.FC<IAboutProps> = ({ about }) => {
     <>
       <Blob />
       <AboutStyle darkMode={darkmode}>
-        <Row>
-          <h3 id="About">About Me</h3>
-        </Row>
+        <Container>
+          <Row>
+            <h3 id="About">About Me</h3>
+          </Row>
 
-        <div className="wrapper">
-          <AboutImgStyle>
-            <div>
-              <Image
-                src={about[0].fields.photo}
-                alt="ibrahim picture"
-                layout="fill"
-                priority={true}
-              />
-            </div>
-          </AboutImgStyle>
-          <div className="title">
-            <p>{about[0].fields.about}</p>
-            <Link href={cvLink}>
-              <a>
+          <div className="wrapper">
+            <AboutImgStyle>
+              <div>
+                <Image
+                  src={about[0].fields.photo}
+                  alt="ibrahim picture"
+                  layout="fill"
+                  priority={true}
+                />
+              </div>
+            </AboutImgStyle>
+            <div className="title">
+              <p>{about[0].fields.about}</p>
+              <a target="_blank" rel="noreferrer" href={cvLink}>
                 <Button>View CV</Button>
               </a>
-            </Link>
+            </div>
           </div>
-        </div>
+        </Container>
       </AboutStyle>
     </>
   );

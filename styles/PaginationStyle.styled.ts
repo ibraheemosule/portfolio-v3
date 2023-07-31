@@ -2,7 +2,8 @@ import styled from "styled-components";
 import { Container } from "./Container.styled";
 
 export const PaginationStyle = styled(Container)`
-
+z-index: 4;
+position: relative;
     margin-top: 40px;
     display: flex;
     justify-content: center;
