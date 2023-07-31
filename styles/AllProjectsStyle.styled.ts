@@ -14,7 +14,6 @@ export const AllProjectsStyle = styled(MainBodyStyle)<IStyle>`
   .container {
     display: flex;
     flex-basis: 100%;
-    max-height: 900px;
     flex-wrap: wrap;
     justify-content: space-around;
 
@@ -121,6 +120,7 @@ export const AllProjectsStyle = styled(MainBodyStyle)<IStyle>`
 
   @media (min-width: 1024px) {
     .container {
+      max-height: 1000px;
       .card {
         flex-basis: 40%;
       }
