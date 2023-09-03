@@ -56,7 +56,6 @@ const MainBody: NextPage<IIndexPageProps> = props => {
   }, [el, setEl]);
 
   const keyProjects = projects.filter(p => {
-    console.log(p.fields.title);
     switch (p.fields.title) {
       case "1907 Store":
         return true;
