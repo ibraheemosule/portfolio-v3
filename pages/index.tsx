@@ -56,12 +56,13 @@ const MainBody: NextPage<IIndexPageProps> = props => {
   }, [el, setEl]);
 
   const keyProjects = projects.filter(p => {
+    console.log(p.fields.title);
     switch (p.fields.title) {
-      case "Formpl":
+      case "1907 Store":
         return true;
-      case "Github Trends Page":
+      case "Website Qr Code":
         return true;
-      case "Covid Statistics":
+      case "Pokemons App":
         return true;
       default:
         return false;
