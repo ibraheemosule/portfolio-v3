@@ -61,7 +61,7 @@ const MainBody: NextPage<IIndexPageProps> = props => {
         return true;
       case "Website Qr Code":
         return true;
-      case "Pokemons App":
+      case "Gomoney Website":
         return true;
       default:
         return false;
