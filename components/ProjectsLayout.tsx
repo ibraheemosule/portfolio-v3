@@ -2,6 +2,7 @@ import Projects from "./Projects";
 import { ProjectsStyle } from "../styles/ProjectsStyle.styled";
 import { Row } from "../styles/Row.styled";
 import { IAllProjectsProps } from "../ts-types/componentTypes";
+import Link from "next/link";
 
 const ProjectsLayout: React.FC<IAllProjectsProps> = ({ projects }) => {
   return (
@@ -22,6 +23,9 @@ const ProjectsLayout: React.FC<IAllProjectsProps> = ({ projects }) => {
             index={i}
           />
         ))}
+        <div className="view-more">
+          <Link href="allProjects">View more projects</Link>
+        </div>
       </div>
     </ProjectsStyle>
   );

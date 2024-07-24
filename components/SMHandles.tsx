@@ -22,7 +22,7 @@ const SMHandles = () => {
       </li>
       <li>
         <a
-          href="https://www.linkedin.com/in/ibrahim-sule-23478919a"
+          href="https://www.linkedin.com/in/ibrahimsule"
           target="_blank"
           rel="noreferrer"
         >

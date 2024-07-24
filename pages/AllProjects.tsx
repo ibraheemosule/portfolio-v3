@@ -56,7 +56,7 @@ const AllProjects: NextPage<IAllProjectsProps> = ({ projects }) => {
 
   useEffect(() => {
     const pag = paginateFunction({
-      arr: [...projects],
+      arr: [...projects.toReversed()],
       pageSize: 4,
       pageNumber: number,
     });

@@ -57,6 +57,24 @@ export const ProjectsStyle = styled.section<IProjectsStyle>`
     }
   }
 
+  .view-more {
+    display: block;
+    margin: 3rem 0 0;
+    text-align: center;
+
+    a {
+      color: ${({ theme }) => theme.theme1.navTextCol};
+      cursor: pointer;
+      font-size: 1.5rem;
+      letter-spacing: 0.1rem;
+      text-decoration: none;
+
+      &:hover {
+        color: ${({ theme }) => theme.theme2.navTextCol};
+      }
+    }
+  }
+
   @media (min-width: 576px) {
     margin-top: -30px;
     padding: 0 3rem;

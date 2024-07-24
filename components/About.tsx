@@ -11,8 +11,7 @@ import { useContext } from "react";
 import { Context } from "../assets/utils/Context";
 import { Container } from "../styles/Container.styled";
 
-const cvLink =
-  "https://drive.google.com/file/d/1gwyWvAQpKLHelvdFyELciAJoQlPhqzyM/view?usp=drive_link";
+const cvLink = process.env.NEXT_PUBLIC_CV_LINK;
 
 const About: React.FC<IAboutProps> = ({ about }) => {
   const { darkmode } = useContext(Context);
