@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import { MainBodyStyle } from "./MainBody.styled";
-import { IStyle } from "../ts-types/styleTypes";
+import styled from 'styled-components';
+import { MainBodyStyle } from './MainBody.styled';
+import { IStyle } from '../ts-types/styleTypes';
 
 export const AllProjectsStyle = styled(MainBodyStyle)<IStyle>`
   display: flex;
@@ -9,7 +9,7 @@ export const AllProjectsStyle = styled(MainBodyStyle)<IStyle>`
   flex-direction: column;
   justify-content: space-between;
   padding: 20vh 0 100px 0;
-  height: 100vh;
+  min-height: 100vh;
 
   .container {
     display: flex;
