@@ -24,7 +24,7 @@ const ProjectsLayout: React.FC<IAllProjectsProps> = ({ projects }) => {
           />
         ))}
         <div className="view-more">
-          <Link href="allProjects">View more projects</Link>
+          <Link href="/AllProjects">View more projects</Link>
         </div>
       </div>
     </ProjectsStyle>
